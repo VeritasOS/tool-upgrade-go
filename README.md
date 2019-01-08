@@ -4,7 +4,7 @@ A library for golang that helps upgrade tools to newer versions with ease.
 
 ## Usage
 
-### Repository structure
+### Artifact Repository structure
 
 ```
 # over-simplified example of directory and file structure required
@@ -12,6 +12,7 @@ A library for golang that helps upgrade tools to newer versions with ease.
 
 # binaries must be suffixed with _${GOOS}_${GOARCH}
 % find path/to/dist
+path/to/dist
 path/to/dist/coolTool_darwin_amd64
 path/to/dist/coolTool_linux_amd64
 path/to/dist/coolTool_windows_amd64
@@ -25,6 +26,19 @@ path/to/dist/coolTool_windows_amd64
 
 # update version channel
 % echo "1.2.3" > path/to/coolTool/.version-latest
+
+# full path structure
+% find path/to/coolTool
+path/to/coolTool
+path/to/coolTool/1.2.2
+path/to/coolTool/1.2.2/coolTool_darwin_amd64
+path/to/coolTool/1.2.2/coolTool_linux_amd64
+path/to/coolTool/1.2.2/coolTool_windows_amd64
+path/to/coolTool/1.2.3
+path/to/coolTool/1.2.3/coolTool_darwin_amd64
+path/to/coolTool/1.2.3/coolTool_linux_amd64
+path/to/coolTool/1.2.3/coolTool_windows_amd64
+path/to/coolTool/.version-latest
 ```
 
 ### Check for updates and upgrade if needed
